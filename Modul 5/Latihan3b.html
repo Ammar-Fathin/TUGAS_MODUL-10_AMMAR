@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Transisi & Rotasi CSS3</title>
+
+    <style type="text/css">
+        .box {
+            width: 40%;
+            height: 100px;
+            background-color: orange;
+            border: 2px solid #212121;
+            margin: 50px auto; /* Memberikan ruang agar rotasi terlihat jelas */
+
+            /* Transisi halus saat perubahan ukuran, bentuk, dan warna */
+            -webkit-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+
+        /* 1. Definisi Keyframes Rotasi 360 Derajat */
+        @keyframes putar_baling {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 2. Pengaturan saat Mode Landscape */
+        @media (orientation: landscape) {
+            .box {
+                width: 100%;           /* Lebar disesuaikan agar oval proporsional */
+                height: 100px;
+                background-color: blue; /* Mengubah warna menjadi biru */
+                border-radius: 50%;      /* Mengubah bentuk menjadi oval */
+
+                /* Jalankan animasi berputar 360deg, tempo 2s, linear, infinite */
+                animation: putar_baling 2s linear infinite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Transisi & Animasi CSS3</h3>
+    <div class="box"></div>
+    <p>
+        Ubah orientasi ke landscape/portrait dan sebaliknya untuk melihat efek transisi dan animasi baling-baling!
+    </p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <title>Kalkulator Sederhana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="kalkulator">
+    <h1>Kalkulator Sederhana</h1>
+
+    <div class="input-group">
+      <label for="angka1">Angka pertama</label>
+      <input type="number" id="angka1" placeholder="Contoh: 10" step="any">
+    </div>
+
+    <div class="input-group">
+      <label for="angka2">Angka kedua</label>
+      <input type="number" id="angka2" placeholder="Contoh: 5" step="any">
+    </div>
+
+    <div class="tombol">
+      <button type="button" onclick="hitung('jumlah')" aria-label="Jumlah">+</button>
+      <button type="button" onclick="hitung('kurang')" aria-label="Kurang">−</button>
+      <button type="button" onclick="hitung('kali')" aria-label="Kali">×</button>
+      <button type="button" onclick="hitung('bagi')" aria-label="Bagi">÷</button>
+    </div>
+
+    <div class="hasil" id="hasil" aria-live="polite">
+      <span class="hasil-label">Hasil</span>
+      <span class="hasil-nilai" id="nilaiHasil">0</span>
+      <span class="hasil-info" id="infoHasil">Isi kedua angka, lalu pilih operasi.</span>
+    </div>
+
+    <button type="button" class="reset" onclick="resetKalkulator()">Hapus semua</button>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

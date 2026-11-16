@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  background: #e8eef2;
+  color: #1f2d3a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.kalkulator {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 28px 24px;
+  border-radius: 14px;
+  border: 1px solid #c9d5dd;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #9fb1bd;
+  border-radius: 8px;
+}
+
+input:focus,
+button:focus-visible {
+  outline: 3px solid #2b7a78;
+  outline-offset: 1px;
+}
+
+.tombol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.tombol button {
+  padding: 12px 0;
+  font-size: 1.4rem;
+  background: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tombol button:hover {
+  background: #20605e;
+}
+
+.hasil {
+  background: #f1f6f8;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hasil-label {
+  font-size: 0.85rem;
+  color: #54677a;
+}
+
+.hasil-nilai {
+  font-size: 1.9rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.hasil-info {
+  font-size: 0.85rem;
+  color: #54677a;
+}
+
+.hasil.error .hasil-nilai,
+.hasil.error .hasil-info {
+  color: #b3261e;
+}
+
+.reset {
+  margin-top: 14px;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #9fb1bd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background: #f1f6f8;
+}
